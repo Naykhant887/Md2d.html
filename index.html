@@ -112,7 +112,7 @@ body {
 
 /* M-D header text */
 .title::before {
-  content: "M-D( 2 )";
+  content: "M-D ( 2 )";
   font-size: 20px;
   font-weight: 400;
 }
@@ -1191,10 +1191,22 @@ margin-bottom: 25px !important;
   font-weight: 700 !important;
   color: #8798ee !important;
 }
+.update-check {
+  display: inline-block;
+  width: 20px;
+  height: 11px;
+  border-left: 4px solid #6dcc3b;
+  border-bottom: 4px solid #6dcc3b;
+  transform: rotate(-45deg);
+  margin-right: 9px;
+  margin-bottom: 5px;
+}
+
 </style>
 </head>
 
 <body>
+
 <!-- =========================
      HEADER
      ========================= -->
@@ -2162,6 +2174,7 @@ function updateTimeCards() {
 
   });
 }
+
 /* =========================
    RESULT JUMP
 ========================= */
@@ -3463,6 +3476,8 @@ const twoDData = [
   }
 
 ];
+
+
 const twoDTimes = [
   "11:00 AM",
   "1:00 PM",
@@ -4165,11 +4180,7 @@ function updateTime() {
   ) {
 
     updated.innerHTML =
-      `<span style="
-        color:#22c55e;
-        font-weight:700;
-        margin-right:5px;
-      ">✓</span>Update : ${timeText}`;
+      `<span class="update-check"></span>Update : ${timeText}`;
 
   } else {
 
@@ -4377,7 +4388,6 @@ onValue(
 
   }
 );
-
   /* =========================
    THAI 3D HISTORY DATA
 ========================= */
@@ -5027,4 +5037,4 @@ function displayDubai3DHistory(data) {
 }
 </script>
 </body>
-</html>
+      </html>
